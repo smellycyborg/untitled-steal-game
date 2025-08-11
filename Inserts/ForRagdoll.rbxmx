@@ -1,0 +1,246 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<Meta name="ExplicitAutoJoints">true</Meta>
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Folder" referent="RBXA5077890F8B94674838C751E0AB6FBAD">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<string name="Name">ForRagdoll</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<BinaryString name="Tags"></BinaryString>
+		</Properties>
+		<Item class="HingeConstraint" referent="RBXD0E1ED5714CB4EE4BE374AD06943279F">
+			<Properties>
+				<token name="ActuatorType">0</token>
+				<float name="AngularResponsiveness">45</float>
+				<float name="AngularSpeed">0</float>
+				<float name="AngularVelocity">0</float>
+				<Ref name="Attachment0">null</Ref>
+				<Ref name="Attachment1">null</Ref>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<int name="Color">1009</int>
+				<bool name="DefinesCapabilities">false</bool>
+				<bool name="Enabled">true</bool>
+				<bool name="LimitsEnabled">true</bool>
+				<float name="LowerAngle">-45</float>
+				<float name="MotorMaxAcceleration">500000</float>
+				<float name="MotorMaxTorque">0</float>
+				<string name="Name">Ankle</string>
+				<float name="Radius">0.150000006</float>
+				<float name="Restitution">0</float>
+				<float name="ServoMaxTorque">0</float>
+				<bool name="SoftlockServoUponReachingTarget">false</bool>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<float name="TargetAngle">0</float>
+				<float name="UpperAngle">0</float>
+				<bool name="Visible">false</bool>
+			</Properties>
+		</Item>
+		<Item class="BallSocketConstraint" referent="RBXF89EB3F8A19B4927A16104B02B31C5B1">
+			<Properties>
+				<Ref name="Attachment0">null</Ref>
+				<Ref name="Attachment1">null</Ref>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<int name="Color">1009</int>
+				<bool name="DefinesCapabilities">false</bool>
+				<bool name="Enabled">true</bool>
+				<bool name="LimitsEnabled">true</bool>
+				<float name="MaxFrictionTorqueXml">0</float>
+				<string name="Name">Default</string>
+				<float name="Radius">0.150000006</float>
+				<float name="Restitution">0</float>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<bool name="TwistLimitsEnabled">false</bool>
+				<float name="TwistLowerAngle">-15</float>
+				<float name="TwistUpperAngle">15</float>
+				<float name="UpperAngle">45</float>
+				<bool name="Visible">false</bool>
+			</Properties>
+		</Item>
+		<Item class="HingeConstraint" referent="RBXF92346E9184F4E0399F2A170E9F29402">
+			<Properties>
+				<token name="ActuatorType">0</token>
+				<float name="AngularResponsiveness">45</float>
+				<float name="AngularSpeed">0</float>
+				<float name="AngularVelocity">0</float>
+				<Ref name="Attachment0">null</Ref>
+				<Ref name="Attachment1">null</Ref>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<int name="Color">1009</int>
+				<bool name="DefinesCapabilities">false</bool>
+				<bool name="Enabled">true</bool>
+				<bool name="LimitsEnabled">true</bool>
+				<float name="LowerAngle">0</float>
+				<float name="MotorMaxAcceleration">500000</float>
+				<float name="MotorMaxTorque">0</float>
+				<string name="Name">Elbow</string>
+				<float name="Radius">0.150000006</float>
+				<float name="Restitution">0</float>
+				<float name="ServoMaxTorque">0</float>
+				<bool name="SoftlockServoUponReachingTarget">false</bool>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<float name="TargetAngle">0</float>
+				<float name="UpperAngle">135</float>
+				<bool name="Visible">false</bool>
+			</Properties>
+		</Item>
+		<Item class="BallSocketConstraint" referent="RBX7E8C5E891220417CA05FB4CB310320A4">
+			<Properties>
+				<Ref name="Attachment0">null</Ref>
+				<Ref name="Attachment1">null</Ref>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<int name="Color">1009</int>
+				<bool name="DefinesCapabilities">false</bool>
+				<bool name="Enabled">true</bool>
+				<bool name="LimitsEnabled">true</bool>
+				<float name="MaxFrictionTorqueXml">0</float>
+				<string name="Name">Hip</string>
+				<float name="Radius">0.150000006</float>
+				<float name="Restitution">0</float>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<bool name="TwistLimitsEnabled">true</bool>
+				<float name="TwistLowerAngle">-3</float>
+				<float name="TwistUpperAngle">3</float>
+				<float name="UpperAngle">40</float>
+				<bool name="Visible">false</bool>
+			</Properties>
+		</Item>
+		<Item class="HingeConstraint" referent="RBXCD64D1C0987A4BD887D18FEAD0AB9F40">
+			<Properties>
+				<token name="ActuatorType">0</token>
+				<float name="AngularResponsiveness">45</float>
+				<float name="AngularSpeed">0</float>
+				<float name="AngularVelocity">0</float>
+				<Ref name="Attachment0">null</Ref>
+				<Ref name="Attachment1">null</Ref>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<int name="Color">1009</int>
+				<bool name="DefinesCapabilities">false</bool>
+				<bool name="Enabled">true</bool>
+				<bool name="LimitsEnabled">true</bool>
+				<float name="LowerAngle">-135</float>
+				<float name="MotorMaxAcceleration">500000</float>
+				<float name="MotorMaxTorque">0</float>
+				<string name="Name">Knee</string>
+				<float name="Radius">0.150000006</float>
+				<float name="Restitution">0</float>
+				<float name="ServoMaxTorque">0</float>
+				<bool name="SoftlockServoUponReachingTarget">false</bool>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<float name="TargetAngle">0</float>
+				<float name="UpperAngle">-10</float>
+				<bool name="Visible">false</bool>
+			</Properties>
+		</Item>
+		<Item class="BallSocketConstraint" referent="RBX202F628328464E7F8394B49649ADC380">
+			<Properties>
+				<Ref name="Attachment0">null</Ref>
+				<Ref name="Attachment1">null</Ref>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<int name="Color">1009</int>
+				<bool name="DefinesCapabilities">false</bool>
+				<bool name="Enabled">true</bool>
+				<bool name="LimitsEnabled">true</bool>
+				<float name="MaxFrictionTorqueXml">0</float>
+				<string name="Name">Neck</string>
+				<float name="Radius">0.150000006</float>
+				<float name="Restitution">0</float>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<bool name="TwistLimitsEnabled">true</bool>
+				<float name="TwistLowerAngle">-45</float>
+				<float name="TwistUpperAngle">45</float>
+				<float name="UpperAngle">0</float>
+				<bool name="Visible">false</bool>
+			</Properties>
+		</Item>
+		<Item class="BallSocketConstraint" referent="RBX1BD3ABF1617B4CF28E27ADF5AE95FCE6">
+			<Properties>
+				<Ref name="Attachment0">null</Ref>
+				<Ref name="Attachment1">null</Ref>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<int name="Color">1009</int>
+				<bool name="DefinesCapabilities">false</bool>
+				<bool name="Enabled">true</bool>
+				<bool name="LimitsEnabled">true</bool>
+				<float name="MaxFrictionTorqueXml">0</float>
+				<string name="Name">Shoulder</string>
+				<float name="Radius">0.150000006</float>
+				<float name="Restitution">0</float>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<bool name="TwistLimitsEnabled">true</bool>
+				<float name="TwistLowerAngle">-30</float>
+				<float name="TwistUpperAngle">30</float>
+				<float name="UpperAngle">30</float>
+				<bool name="Visible">false</bool>
+			</Properties>
+		</Item>
+		<Item class="BallSocketConstraint" referent="RBX643ABB39EC9147428C2D24E10B581D56">
+			<Properties>
+				<Ref name="Attachment0">null</Ref>
+				<Ref name="Attachment1">null</Ref>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<int name="Color">1009</int>
+				<bool name="DefinesCapabilities">false</bool>
+				<bool name="Enabled">true</bool>
+				<bool name="LimitsEnabled">true</bool>
+				<float name="MaxFrictionTorqueXml">0</float>
+				<string name="Name">Waist</string>
+				<float name="Radius">0.150000006</float>
+				<float name="Restitution">0</float>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<bool name="TwistLimitsEnabled">true</bool>
+				<float name="TwistLowerAngle">-1</float>
+				<float name="TwistUpperAngle">1</float>
+				<float name="UpperAngle">15</float>
+				<bool name="Visible">false</bool>
+			</Properties>
+		</Item>
+		<Item class="HingeConstraint" referent="RBX23A2724AEE0B45768289A23EDCE31276">
+			<Properties>
+				<token name="ActuatorType">0</token>
+				<float name="AngularResponsiveness">45</float>
+				<float name="AngularSpeed">0</float>
+				<float name="AngularVelocity">0</float>
+				<Ref name="Attachment0">null</Ref>
+				<Ref name="Attachment1">null</Ref>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<int name="Color">1009</int>
+				<bool name="DefinesCapabilities">false</bool>
+				<bool name="Enabled">true</bool>
+				<bool name="LimitsEnabled">true</bool>
+				<float name="LowerAngle">-20</float>
+				<float name="MotorMaxAcceleration">500000</float>
+				<float name="MotorMaxTorque">0</float>
+				<string name="Name">Wrist</string>
+				<float name="Radius">0.150000006</float>
+				<float name="Restitution">0</float>
+				<float name="ServoMaxTorque">0</float>
+				<bool name="SoftlockServoUponReachingTarget">false</bool>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<float name="TargetAngle">0</float>
+				<float name="UpperAngle">20</float>
+				<bool name="Visible">false</bool>
+			</Properties>
+		</Item>
+	</Item>
+</roblox>

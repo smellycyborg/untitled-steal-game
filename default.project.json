@@ -12,6 +12,12 @@
       },
       "Modules": {
         "$path": "Modules"
+      },
+      "Inserts": {
+        "$path": "Inserts"
+      },
+      "Packages": {
+        "$path": "Packages"
       }
     },
 
