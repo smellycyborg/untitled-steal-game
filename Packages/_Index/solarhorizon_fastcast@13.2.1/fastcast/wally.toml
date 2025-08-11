@@ -1,0 +1,16 @@
+[package]
+name = "solarhorizon/fastcast"
+description = "Bullet physics & hit detection module"
+authors = ["EtiTheSpirit"]
+version = "13.2.1"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+exclude = [ "**" ]
+include = [
+	"src**",
+	"default.project.json",
+	"wally.toml",
+	"wally.lock",
+]
+
+[dependencies]

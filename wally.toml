@@ -1,0 +1,34 @@
+[package]
+name = "chave/grow-grandmas-hair"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+react = "jsdotlua/react@17.2.1"
+react-roblox = "jsdotlua/react-roblox@17.2.1"
+react-spring = "chriscerie/react-spring@2.0.0"
+roact-template = "corecii/roact-template@0.2.1"
+
+planck = "yetanotherclown/planck@0.2.0"
+jecs = "ukendio/jecs@0.8.3"
+vide = "centau/vide@0.3.1"
+
+signal = "sleitnick/signal@2.0.1"
+trove = "sleitnick/trove@1.5.1"
+comm = "sleitnick/comm@0.3.2"
+typed-remote = "sleitnick/typed-remote@0.2.1"
+
+charm = "littensy/charm@0.10.0"
+charm-sync = "littensy/charm-sync@0.3.0"
+
+promise = "evaera/promise@4.0.0"
+typed-promise = "howmanysmall/typed-promise@4.0.6"
+
+profileservice = "4x8matrix/profile-service-fork@1.0.0"
+
+bytenet = "ffrostflame/bytenet@0.4.6"
+sift = "csqrl/sift@0.0.8"
+zoneplus = "mattschrubb/zoneplus@3.2.0"
+fastcast = "solarhorizon/fastcast@13.2.1"
+topbarplus = "legitatx/topbarplus@3.0.5"
