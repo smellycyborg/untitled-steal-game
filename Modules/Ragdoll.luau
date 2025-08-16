@@ -25,7 +25,7 @@ end
 
 local Ragdoll = {}
 
-Ragdoll.ActivateRagdoll = TypedRemote.event("ActivateRagdoll", ReplicatedStorage) :: TypedRemote.Event<Model, boolean>
+Ragdoll.ActivateRagdoll = TypedRemote.event("ActivateRagdoll", ReplicatedStorage) :: TypedRemote.Event<number, boolean>
 
 function Ragdoll.RagdollCharacter(Character : Model)
 	local Player = Players:GetPlayerFromCharacter(Character)
