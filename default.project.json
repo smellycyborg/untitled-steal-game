@@ -18,12 +18,24 @@
       },
       "Packages": {
         "$path": "Packages"
+      },
+      "Classes": {
+        "$path": "Classes"
+      },
+      "Components": {
+        "$path": "Components"
+      },
+      "Stories": {
+        "$path": "Stories"
       }
     },
 
     "ServerScriptService": {
       "Server": {
         "$path": "src/server"
+      },
+      "NodeModules": {
+        "$path": "node_modules"
       }
     },
 
