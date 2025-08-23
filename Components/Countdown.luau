@@ -1,4 +1,5 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
 
 local Packages = ReplicatedStorage:WaitForChild("Packages")
 
@@ -16,9 +17,12 @@ local function _formatTime(seconds: number): string
 end
 
 return function(props)
+    local countdownText =  "Starting in "
+
     return Vide.create "ScreenGui" {
         Name = "Countdown",
         ResetOnSpawn = false,
+        IgnoreGuiInset = true,
 
         Vide.create "Frame" {
             Name = "ScreenHolder",
@@ -28,7 +32,11 @@ return function(props)
 
             Vide.create "TextLabel" {
                 Text = function()
-                    return `{_formatTime(props.countdown())}`
+                    local matchActive = ReplicatedStorage:FindFirstChild("MatchStatus") and ReplicatedStorage:FindFirstChild("MatchStatus").Value
+                    if matchActive == true then
+                        countdownText = "Time Left "
+                    end
+                    return `{countdownText}{_formatTime(props.countdown())}`
                 end,
 
                 Name = "CountdownLabel",
