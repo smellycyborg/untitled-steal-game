@@ -113,25 +113,10 @@ return {
         speed = 10,
 
         animationIds = {
-            walking = 1,
-            idle = 1,
-            running = 1,
-            freakOut = 1,
-        }
-    },
-    BombGeese = { 
-        displayName = "Bombardini Gusini",
-        rarity = "Rare",
-
-        moneyPerTime = 50,
-        timeInterval = 3,
-        speed = 10,
-
-        animationIds = {
-            walking = 1,
-            idle = 1,
-            running = 1,
-            freakOut = 1,
+            walking = 99544850144048,
+            idle = 89766839740570,
+            running = 99544850144048,
+            freakOut = 111893510830123,
         }
     },
     ChimpBanana = { 
@@ -219,10 +204,100 @@ return {
         speed = 10,
 
         animationIds = {
-            walking = 1,
-            idle = 1,
-            running = 1,
-            freakOut = 1,
+            walking = 132976037419852,
+            idle = 92171749809725,
+            running = 99370834388984,
+            freakOut = 101597092908962,
         }
     },
+    Udin = {
+        displayName = "U Din Din Din Din Dun Ma Din Din Din Dun",
+        rarity = "Rare",
+
+        moneyPerTime = 50,
+        timeInterval = 3,
+        speed = 10,
+
+        animationIds = {
+            walking = 98705829416762,
+            idle = 115040345585363,
+            running = 123257108166006,
+            freakOut = 115040345585363, -- this freak out is idle
+        }
+    },
+    BombGeese = {
+        displayName = "Bombardini Gusini",
+        rarity = "Rare",
+
+        moneyPerTime = 50,
+        timeInterval = 3,
+        speed = 10,
+
+        animationIds = {
+            walking = 135748812475111,
+            idle = 134957490050559,
+            running = 135748812475111,
+            freakOut = 80445552359163,
+        }
+    },
+    Brr = {
+        displayName = "Brr brr patapim",
+        rarity = "Rare",
+
+        moneyPerTime = 50,
+        timeInterval = 3,
+        speed = 10,
+
+        animationIds = {
+            walking = 94717245234675,
+            idle = 118867599151586,
+            running = 124958516986101,
+            freakOut = 96907777335761,
+        }
+    },
+    Bone = {
+        displayName = "Boneca Ambalabu",
+        rarity = "Rare",
+
+        moneyPerTime = 50,
+        timeInterval = 3,
+        speed = 10,
+
+        animationIds = {
+            walking = 113024725590353,
+            idle = 94392444362471,
+            running = 90263740911714,
+            freakOut = 131691546684022,
+        }
+    },
+    Cam = {
+        displayName = "Frigo Camelo",
+        rarity = "Rare",
+
+        moneyPerTime = 50,
+        timeInterval = 3,
+        speed = 10,
+
+        animationIds = {
+            walking = 122124393073130,
+            idle = 105531396080248,
+            running = 139758111790170,
+            freakOut = 105531396080248, -- this freak out is idle 
+        }
+    },
+    Sat = {
+        displayName = "Vaquita Saturnita",
+        rarity = "Rare",
+
+        moneyPerTime = 50,
+        timeInterval = 3,
+        speed = 10,
+
+        animationIds = {
+            walking = 96486755645054,
+            idle = 87004977464564,
+            running = 84118937464977,
+            freakOut = 118824535842471,
+        }
+    }
 }

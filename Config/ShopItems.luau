@@ -1,20 +1,20 @@
 return {
     Tools = {
-        TheClapHand = {
-            displayName = "The Clap Hand",
+        BigHand = {
+            displayName = "The Big Hand",
             price = 2000,
             robuxPrice = 27,
-            description = "Make players fly across the map.",
-            imageId = "rbxassetid://15588301798",
-            gamepassId = 1,
+            description = "Make players fly easier with more distance to hit.",
+            imageId = "rbxassetid://109841249769996",
+            gamepassId = 1411364564,
         },
         SpeedCoil = {
             displayName = "Speed & Jump Coil",
             price = 4000,
             robuxPrice = 37,
             description = "Run higher and jump faster.",
-            imageId = "http://www.roblox.com/asset/?id=1059024026",
-            gamepassId = 1,
+            imageId = "rbxassetid://116848878734828",
+            gamepassId = 1412076351,
         }
     }
 }
