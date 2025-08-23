@@ -48,6 +48,7 @@ local function timers(props)
                 
                 Vide.create "TextLabel" {
                     Text = _formatTime(timeLeft),
+                    FontFace = Font,
 
                     BackgroundTransparency = 1,
                     Size = UDim2.fromScale(0.9, 0.9),
@@ -73,14 +74,7 @@ Vide.mount(timers, player:WaitForChild("PlayerGui"))
 
 Gates.ManageGate.OnClientEvent:Connect(function(gateName: string, action: string, hasTimer)  -- gatename is the name of the team
     local gateWall = Workspace:FindFirstChild("WallsPerTeam"):FindFirstChild(gateName)
-    if not gateWall then
-        return
-    end
-
     local bars = Workspace:FindFirstChild("Bars"):FindFirstChild(gateName)
-    if not bars then
-        return
-    end
 
     if action == "CLOSE" then
         if gateName ~= player.Team.Name then
@@ -88,7 +82,13 @@ Gates.ManageGate.OnClientEvent:Connect(function(gateName: string, action: string
             for _, bar in bars:GetChildren() do
                 bar.CanCollide = true
             end
+        else
+            gateWall.CanCollide = false
+            for _, bar in bars:GetChildren() do
+                bar.CanCollide = false
+            end
         end
+
         for _, bar in bars:GetChildren() do
             bar.Transparency = 0
         end
@@ -96,9 +96,9 @@ Gates.ManageGate.OnClientEvent:Connect(function(gateName: string, action: string
         local tempTab = teamGatesOpen()
         tempTab[gateName] = nil
         teamGatesOpen(tempTab)
-
     elseif action == "OPEN" then
         gateWall.CanCollide = false
+        
         for _, bar in bars:GetChildren() do
             bar.CanCollide = false
         end

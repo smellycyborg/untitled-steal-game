@@ -14,6 +14,7 @@ local SET_TIMER = true
 
 local Gates = {}
 
+local StatePerGate = {}
 local TimeLeftPerGate = {}
 local TimeElapsedPerGate = {}
 
@@ -59,6 +60,7 @@ end
 
 function Gates.Open(gates: {string})
     for _, color in gates do
+        StatePerGate[color] = "OPEN"
         Gates.ManageGate:FireAllClients(color, "OPEN")
         Buttons:FindFirstChild(color):FindFirstChild("ProximityPrompt", true).Enabled = true
     end
@@ -70,8 +72,17 @@ function Gates.Close(gates: {string}, setTimer: boolean)
             TimeLeftPerGate[color] = DEFAULT_CLOSE_TIME
             TimeElapsedPerGate[color] = 0
         end
+        StatePerGate[color] = "CLOSE"
         Gates.ManageGate:FireAllClients(color, "CLOSE", setTimer)
     end
+end
+
+function Gates.GetState(teamName: string)
+    return StatePerGate[teamName]
+end
+
+function Gates.GetTimeLeft(teamNmae: string)
+    return TimeLeftPerGate[teamNmae]
 end
 
 Gates.OpenGates = Signal.new()
