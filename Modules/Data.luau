@@ -5,8 +5,8 @@ local ServerStorage = game:GetService("ServerStorage")
 
 local Packages = ReplicatedStorage.Packages
 
-local Signal = require(Packages.signal)
-local ProfileService = require(Packages.profileservice)
+local Signal = require(Packages:WaitForChild("signal"))
+local ProfileService = require(Packages:WaitForChild("profileservice"))
 
 local TEST_KEY = "214"
 local LIVE_KEY = "4"
@@ -16,8 +16,6 @@ local Data = {}
 local Profiles = {}
 local tasks = {}
 local DataTaskPerPlayer = {}
-
-
 
 function Data.InitServer()
     if not RunService:IsServer() then
@@ -69,10 +67,21 @@ function Data.StartServer()
 
                     local playerData = Profiles[player].Data
 
-                    warn(player.Name .. " points " .. playerData.Points or 0)
+                    local playerPoints = playerData.Points or 0
+                    local playerCurrency = playerData.tickets
+                    if playerCurrency then
+                        Data.UpdateValue:Fire(player, "tickets", playerCurrency)
+                    end
+
+                    if playerData.hasCompletedTutorial then
+                        player:SetAttribute("CompletedTutorial", true)
+                    end
+
+                    warn(player.Name .. " points " .. playerPoints)
 
                     -- update player values
                     wins.Value = playerData.wins or 0
+                    brainrots.Value = playerData.brainrots or 0
 
                     local function updateValue(valueObject, key)
                         valueObject:GetPropertyChangedSignal("Value"):Connect(function()
@@ -164,5 +173,6 @@ function Data.Get(player)
 end
 
 Data.PointsObserver = Signal.new()
+Data.UpdateValue = Signal.new()
 
 return Data
