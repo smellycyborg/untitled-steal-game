@@ -1,5 +1,9 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local typed_remote = require(ReplicatedStorage.Packages["typed-remote"])
+
+local Packages = ReplicatedStorage:WaitForChild("Packages")
+
+local typed_remote = require(Packages:WaitForChild("typed-remote"))
+
 local player = game.Players.LocalPlayer
 
 local basePower = 40
@@ -91,5 +95,6 @@ function Knockback.ApplyToCharacterInDirection(character: Model, direction: Vect
 end
 
 Knockback.ActivateKnockback = typed_remote.event("ActivateKnockback", ReplicatedStorage) :: typed_remote.Event<number, Vector3>
+Knockback.ShowEffects = typed_remote.event("ShowEffects", ReplicatedStorage) :: typed_remote.Event<number>
 
 return Knockback
