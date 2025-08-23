@@ -13,15 +13,17 @@ local Font: Font = Font.fromId(FONT_ID, Enum.FontWeight.Bold, Enum.FontStyle.Ita
 
 return function(props)
     local model = Actors:FindFirstChild(props.name)
-    if not model then
+    if not model or props.part:GetAttribute("CarrierId") 
+    or not props.part:GetAttribute("Team") 
+    and props.part:GetAttribute("HasBeenCarried") then
         return {}
     end
-    local sizeY = model:GetExtentsSize().Y
+    local sizeY = model.PrimaryPart.Size.Y + 2.5
 
     return Vide.create "BillboardGui" {
         Adornee = props.part,
         Name = "ActorInfo",
-        Size = UDim2.fromScale(5, 4),
+        Size = UDim2.new(5, 40, 4, 30),
         StudsOffset = Vector3.new(0, sizeY, 0),
         
         Vide.create "Frame" {
