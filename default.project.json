@@ -27,6 +27,9 @@
       },
       "Stories": {
         "$path": "Stories"
+      },
+      "Functions": {
+        "$path": "Functions"
       }
     },
 
@@ -54,6 +57,7 @@
       "Baseplate": {
         "$className": "Part",
         "$properties": {
+          "Transparency": 1,
           "Anchored": true,
           "Color": [
             0.38823,
