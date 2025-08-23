@@ -1,8 +1,11 @@
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
-local signal = require(ReplicatedStorage.Packages.signal)
-local typed_remote = require(ReplicatedStorage.Packages["typed-remote"])
+
+local Packages = ReplicatedStorage:WaitForChild("Packages")
+
+local signal = require(Packages:WaitForChild("signal"))
+local typed_remote = require(Packages:WaitForChild("typed-remote"))
 
 local TIME_UNTIL_NEXT_ATTACK = 0.4
 
@@ -34,15 +37,18 @@ function Tool.InitClient()
                 humanoid.JumpPower = 100
             end
             activatedConns[child.Name] = child.Activated:Connect(function(...: any)
-                if child.Name == "Club" and not PlayersAttacking[player.UserId] then
-                    PlayersAttacking[player.UserId] = child
-                    task.delay(TIME_UNTIL_NEXT_ATTACK, function()
-                        PlayersAttacking[player.UserId] = nil
-                    end)
+                if child.Name == "Club" or child.Name == "BigHand" then
+                    if not PlayersAttacking[player.UserId] then
+                        PlayersAttacking[player.UserId] = child
+                        task.delay(TIME_UNTIL_NEXT_ATTACK, function()
+                            PlayersAttacking[player.UserId] = nil
+                        end)
 
-                    Tool.StartedAttacking:Fire(child.Name)
+                        Tool.StartedAttacking:Fire(child.Name)
+                        Tool.PlayerAttacked:FireServer()
 
-                    -- print(`{child.Name} Activated.  Player is Attacking.`)
+                        -- print(`{child.Name} Activated.  Player is Attacking.`)
+                    end
                 end
             end)
         end)
@@ -59,7 +65,7 @@ function Tool.InitClient()
                     return
                 end
 
-                humanoid.WalkSpeed = 26
+                humanoid.WalkSpeed = 28
                 humanoid.JumpPower = 50
             end
         end)
@@ -181,5 +187,6 @@ Tool.StartedAttacking = signal.new()
 
 Tool.SendResult = typed_remote.event("SendResult", ReplicatedStorage) :: typed_remote.Event<number, Vector3>
 Tool.ClearRegistered = typed_remote.event("ClearRegisteredForUserId", ReplicatedStorage) :: typed_remote.Event<number>
+Tool.PlayerAttacked = typed_remote.event("PlayerAttacked", ReplicatedStorage) :: typed_remote.Event<>
 
 return Tool
