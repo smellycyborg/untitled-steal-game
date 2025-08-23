@@ -1,3 +1,4 @@
+local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
 
@@ -5,6 +6,7 @@ local Packages = ReplicatedStorage:WaitForChild("Packages")
 local Classes = ReplicatedStorage:WaitForChild("Classes")
 local Animations = ReplicatedStorage:WaitForChild("Animations")
 
+local typed_remote = require(Packages:WaitForChild("typed-remote"))
 local Signal = require(Packages:WaitForChild("signal"))
 local AnimationClass = require(Classes:WaitForChild("AnimationClass"))
 
@@ -42,7 +44,6 @@ function Animation.LoadCharacter(character: Model, uniqueKey: string)
         end)
     end
 end
-
 
 Animation.ResumeAnimationByName = Signal.new()
 Animation.PlayAnimation = Signal.new()
